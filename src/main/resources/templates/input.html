@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>添加用户信息</title>
+</head>
+<body>
+
+  <h3>添加用户信息</h3>
+  <form th:action="@{~/user/save}" method="post">
+	姓名：<input type="text" name="name" /><br />
+	性别：<input type="text" name="gender" /><br />
+	年龄：<input type="text" name="age" /><br />
+	<input type="submit" value="保存">
+  </form>
+
+</body>
+</html>
+

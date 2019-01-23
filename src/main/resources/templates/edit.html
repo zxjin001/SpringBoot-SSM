@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>修改用户信息</title>
+</head>
+<body>
+
+  <h3>修改用户信息</h3>
+  <form th:action="@{~/user/save}" method="post">
+  
+    <!-- 隐藏域 -->
+    <input type="hidden" name="id" th:field="${user.id}">
+  
+	姓名：<input type="text" name="name" 
+		th:field="${user.name}"/><br />
+		
+	性别：<input type="text" name="gender"  
+		th:field="${user.gender}"/><br />
+		
+	年龄：<input type="text" name="age"  
+		th:field="${user.age}"/><br />
+		
+	<input type="submit" value="保存">
+  </form>
+
+</body>
+</html>

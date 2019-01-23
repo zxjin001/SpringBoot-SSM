@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>用户列表展示</title>
+</head>
+<body>
+
+	<h3>用户列表展示</h3>
+	<table border="1" style="width:500px">
+		<tr>
+			<th>编号</th>
+			<th>名称</th>
+			<th>性别</th>
+			<th>年龄</th>
+			<th>操作</th>
+		</tr>
+		<tr th:each="user : ${list}">
+			<td th:text="${user.id}"></td>
+			<td th:text="${user.name}"></td>
+			<td th:text="${user.gender}"></td>
+			<td th:text="${user.age}"></td>
+			<td>
+			  <a th:href="@{~/user/findById(id=${user.id})}">
+				修改</a> &nbsp;
+			  <a th:href="@{~/user/delete(id=${user.id})}">
+				删除</a>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html> 
